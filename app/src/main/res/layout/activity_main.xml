@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainPage.MainActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabGravity="fill"
+                android:background="@color/colorPrimary"
+                app:tabMode="scrollable" />
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <include layout="@layout/content_main" />
+
+
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@android:drawable/ic_dialog_email"
+            android:background="@color/fab"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+    <LinearLayout
+        android:id="@+id/linearslidemenu"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:background="#549" />
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

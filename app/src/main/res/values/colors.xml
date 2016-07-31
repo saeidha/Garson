@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#d81b60</color>
+    <color name="tabs">#d81b60</color>
+    <color name="colorPrimaryDark">#880e4f</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#c8e8ff</color>
+    <color name="first_fragment">#ff0</color>
+    <color name="fab">#e91e63</color>
+    <color name="logintext">#405365</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="white">#ffffff</color>
+</resources>
