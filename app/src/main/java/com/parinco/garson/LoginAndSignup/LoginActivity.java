@@ -1,33 +1,33 @@
 package com.parinco.garson.LoginAndSignup;
 
 
-import android.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
-import android.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
-import com.parinco.garson.MainPage.Homefragment;
 import com.parinco.garson.R;
-import com.parinco.garson.LoginAndSignup.SignupFragment;
 
 public class LoginActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+        android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        transaction.replace(R.id.loginfragment,new loginFragment(),"login");
-        transaction.commit();
+        ConnectivityManager cmanager = (ConnectivityManager)
+                getSystemService(this.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = cmanager.getActiveNetworkInfo();
 
-
-
+        fragmentTransaction.replace(R.id.loginfragment, new LoginFragment()).commit();
+        if(networkInfo !=null && networkInfo.isConnected()) {
+            Log.i("my","hooooo");
+        }
 
     }
-
-
 }

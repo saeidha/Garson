@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#d81b60</color>
+    <color name="colorPrimary">#F62459</color>
     <color name="tabs">#d81b60</color>
     <color name="colorPrimaryDark">#880e4f</color>
     <color name="textColorPrimary">#FFFFFF</color>
@@ -12,4 +12,8 @@
     <color name="logintext">#405365</color>
     <color name="black_overlay">#66000000</color>
     <color name="white">#ffffff</color>
+    <color name="loginback">#E4393F</color>
+    <color name="transparent">#00000000</color>
+    <color name="blue">#19B5FE</color>
+    <color name="snuf">#DCC6E0</color>
 </resources>

@@ -17,9 +17,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -50,7 +50,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+      //  getActionBar().setTitle("گارسون");
+        Log.i("my","hg");
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +60,12 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
+        Log.i("my","hg");
+
+
+
+
+
 
         //check login
 
@@ -81,7 +88,7 @@ public class MainActivity extends AppCompatActivity
         Log.i("my",String.valueOf(login));
         if(!login){
             Intent loginintent = new Intent(MainActivity.this,LoginActivity.class);
-            startActivity(loginintent);
+           startActivity(loginintent);
         }
 
 
@@ -98,8 +105,19 @@ public class MainActivity extends AppCompatActivity
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcons();
 
+        //tabs finish
+
+
+
+
+
+
+
+
+
 
     }
+
 
     private void setupTabIcons() {
 
@@ -120,7 +138,7 @@ public class MainActivity extends AppCompatActivity
         adapter.addFragment(new Cateringfragment(), "Catering");
         adapter.addFragment(new FastFoodfragment(), "FastFood");
         adapter.addFragment(new Juicefragment(), "Juice");
-        adapter.addFragment(new NearMefragment(), "NearMe");
+        adapter.addFragment(new NearMeefragment(), "NearMe");
         viewPager.setAdapter(adapter);
     }
 

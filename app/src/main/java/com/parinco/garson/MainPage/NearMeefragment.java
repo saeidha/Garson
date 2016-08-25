@@ -9,14 +9,13 @@ import android.view.ViewGroup;
 
 import com.parinco.garson.R;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
-public class NearMefragment extends Fragment {
+public class NearMeefragment extends Fragment {
 
 
-    public NearMefragment() {
+    public NearMeefragment() {
         // Required empty public constructor
     }
 
@@ -25,7 +24,7 @@ public class NearMefragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_caffefragment, container, false);
+        return inflater.inflate(R.layout.fragment_nearmefragment, container, false);
     }
 
 }
